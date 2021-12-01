@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/num1Et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:digits="0123456789"
+        android:hint="num1"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/num2Et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="num1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num1Et" />
+
+    <Button
+        android:id="@+id/addBt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/multiply"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/num2Et" />
+
+    <Button
+        android:id="@+id/multiplyBt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="*"
+        app:layout_constraintEnd_toStartOf="@+id/subBt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/addBt"
+        app:layout_constraintTop_toBottomOf="@id/num2Et" />
+
+    <Button
+        android:id="@+id/subBt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="-"
+        app:layout_constraintEnd_toStartOf="@+id/divBt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/multiplyBt"
+        app:layout_constraintTop_toBottomOf="@id/num2Et" />
+
+    <Button
+        android:id="@+id/divBt"
+        android:layout_width="0dp"
+        android:text="/"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/subBt"
+        app:layout_constraintTop_toBottomOf="@id/num2Et" />
+
+    <TextView
+        android:id="@+id/resTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="40dp"
+        android:background="@color/purple_200"
+        android:padding="1dp"
+        android:text="gfgf"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        app:layout_constraintTop_toBottomOf="@id/addBt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
